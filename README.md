@@ -40,7 +40,7 @@ The reaction string is parsed according to a grammar:
 
 ```
 Reaction ::= Participant[ + Participant]* = Participant[ + Participant]*
-``
+```
 
 The grammar is encoded by a prolog DCG. The grammar is semi-deterministic, so each string has zero or one parses
 
