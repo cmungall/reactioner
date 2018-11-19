@@ -1,0 +1,7 @@
+.swipl_history
+RDF-Cache/
+.cache
+examples/load-data
+.plhistory
+*.old
+*.tmp
