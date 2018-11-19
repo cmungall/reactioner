@@ -19,6 +19,11 @@ Install SWI-Prolog from http://www.swi-prolog.org
 
 Run directly using [bin/reactioner](bin/reactioner)
 
+## Reports
+
+ * [data/go-rhea-newsyns.tsv](data/go-rhea-newsyns.tsv) - suggested syns from RHEA
+ * [data/go-rhea-check.tsv](data/go-rhea-check.tsv) - checking RHEA xrefs
+
 ## Algorithm
 
 This code parses structured text definitions of reactions (in particular, those used by GO).
@@ -51,6 +56,8 @@ according to the strengths of each match.
 We prioritize matches to name/label above synonym matches. We treat
 all synonym scopes as equivalent, as CHEBI uses related vs exact
 arbitrarily.
+
+TODO: use rhea-suggested synonyms
 
 ### Balancing
 
@@ -106,7 +113,18 @@ We use the "Ygevny transform" by default.
 
 ### Logical Match to RHEA (TODO)
 
-Exact match can be performed. For true equivalence or subsumption test use an OWL reasoner
+Exact match can be performed. For true equivalence or subsumption test use an OWL reasoner.
+
+### Deriving synonyms from RHEA
+
+Often RHEA will use a CHEBI ID that does not seem justified by the label they use.
+
+We can query their RDF, RHEA uses their own labels for each compound,
+and map this to CHEBI. We can query these pairs:
+
+ * [data/go-rhea-newsyns.tsv](data/go-rhea-newsyns.tsv) - suggested syns from RHEA
+
+We note whether the label they choose is a new string or corresponds to a different ID (ambiguous)
 
 ### Semantic Similarity search of RHEA, MetaCyc etc
 

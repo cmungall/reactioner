@@ -3,5 +3,6 @@ RDF-Cache/
 .cache
 examples/load-data
 .plhistory
+data/chebi.owl.gz
 *.old
 *.tmp
