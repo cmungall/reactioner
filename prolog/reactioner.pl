@@ -17,6 +17,7 @@
 
 :- module(reactioner,
           [op(700,xfy,<=>),
+           catalytic_activity/1,
            index_chebi/0,
            chemical_elqs/2,
            sum_all_elqs/2,
@@ -41,8 +42,10 @@
 :- op(700,xfy,<=>).
 
 :- use_module(library(reactioner/learner)).
-:- use_module(library(sparqlprog/ontologies/rhea),[]).
+:- use_module(library(reactioner/rhea_wrapper),[]).
 :- use_module(library(reactioner/stat_util)).
+:- use_module(library(sparqlprog/dataframe)).
+:- use_module(library(sparqlprog/obo_util)).
 
 :- use_module(library(index_util)).
 :- use_module(library(rdf_matcher)).
@@ -76,6 +79,8 @@ index_chebi :-
 
 catalytic_activity(X) :-
         rdfs_subclass_of(X,ca:'').
+        
+
 
 no_parse(X,Def) :-
         catalytic_activity(X),

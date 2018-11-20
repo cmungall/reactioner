@@ -29,11 +29,17 @@ t-%:
 # --------------------
 # Reports
 # --------------------
+reports/go-activities.tsv:
+	./bin/reactioner -i data/chebi.owl.gz -i data/go-ca.ttl.gz report catalytic_activity > $@.tmp && mv $@.tmp $@
+
+reports/go-no-parse.tsv:
+	./bin/reactioner -i data/chebi.owl.gz -i data/go-ca.ttl.gz report no_parse > $@.tmp && mv $@.tmp $@
+
 reports/go-rhea-check.tsv:
-	./bin/reactioner -l -v -T -i data/rhea.rdf.gz -i data/chebi.owl.gz -i data/go-ca.ttl.gz check_rhea > $@.tmp && mv $@.tmp $@
+	./bin/reactioner -l -v -T -i data/rhea.rdf.gz -i data/chebi.owl.gz -i data/go-ca.ttl.gz report check_rhea_xref > $@.tmp && mv $@.tmp $@
 
 reports/go-rhea-newsyns.tsv:
-	./bin/reactioner -l -v -T -i data/rhea.rdf.gz -i data/chebi.owl.gz  rhea_synonyms > $@.tmp && cut -f1,2,3,5,7 $@.tmp | sort -u > $@
+	./bin/reactioner -l -v -T -i data/rhea.rdf.gz -i data/chebi.owl.gz report  rhea_derived_synonyms > $@.tmp && mv $@.tmp $@
 
 # --------------------
 # Docker

@@ -6,6 +6,9 @@
 :- use_module(library(rdf_matcher)).
 
 :- use_module(library(sparqlprog/io_utils)).
+:- use_module(library(sparqlprog/obo_util)).
+:- use_module(library(sparqlprog/dataframe)).
+:- use_module(library(reactioner/reporting)).
 
 :- use_module(library(csv)).
 :- use_module(library(main)).
@@ -199,6 +202,13 @@ run(show, _, _Opts) :-
         G = mf_reaction(_,_,_,_,_),
         forall(G,
                write_result_wrap(G,[format(tsv)])).
+
+run(no_parse, _, _Opts) :-
+        dataframe_to_csv(no_parse,[]).
+
+run(report, [Name|_], _Opts) :-
+        dataframe_to_csv(Name,[]).
+
 
 
 run(badchebi, _, Opts) :-
