@@ -46,6 +46,11 @@ The grammar is encoded by a prolog DCG. The grammar is semi-deterministic, so ea
 
 TODO: co-efficients/stoichiometry
 
+See also:
+Jupe et al. (https://doi.org/10.1093/database/bau060)
+
+for generative approach in Reactome
+
 ### Entity Matching
 
 Each of the participants is matched using CHEBI. Because strings do

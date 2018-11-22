@@ -210,6 +210,7 @@ match_chemical(Tok, URI/Term, -100) :-
         rdf_assert(URI, rdfs:label, Term@en).
 
 
+
 % creates a dynamic expression
 create_expression(BaseCls,Mod,Cls) :-
         concat_atom([BaseCls, ' (',Mod,')'],A),
@@ -219,6 +220,12 @@ create_expression(BaseCls,Mod,Cls) :-
 tokenize_chemical(N,Toks) :-
         atom_codes(N,Codes),
         phrase(chemtokens(Toks),Codes).
+
+/*
+chemids_lexmatch(L1,L2,S) :-
+        solutions(S1,(member(X,L1),
+                      aggregate(max(S1),((member(Y,L2),chem_cls_pair_lexmatch(X,Y
+*/
 
 chemterm_lexmatch(N1,N2,S) :-
         tokenize_chemical(N1,Toks1),
@@ -401,6 +408,7 @@ setif(G,T,T,_) :- G,!.
 setif(_,F,_,F).
 
 
+%! rhea_derived_synonym(ChebiCls:atom, RheaName:atom, Info:info, Score:float) :-
 rhea_derived_synonym(Cls,N,Info,Score) :-
         rhea:reaction_participant(_R,P),
         rdf(P,rh:compound,C),
@@ -613,6 +621,7 @@ modifier( Q ) -->
 
 modterm(`in`) --> `in`.
 modterm(`out`) --> `out`.
+modterm(`n`) --> `n+1`.
 modterm(`n`) --> `n`.
 
 

@@ -41,6 +41,9 @@ reports/go-rhea-check.tsv:
 reports/go-rhea-newsyns.tsv:
 	./bin/reactioner -l -v -T -i data/rhea.rdf.gz -i data/chebi.owl.gz report  rhea_derived_synonyms > $@.tmp && mv $@.tmp $@
 
+reports/chebi-no-match.tsv:
+	./bin/reactioner -l -v -T -i data/rhea.rdf.gz -i data/go-ca.ttl.gz -i data/chebi.owl.gz report  chebi_no_match > $@.tmp && mv $@.tmp $@
+
 # --------------------
 # Docker
 # --------------------
