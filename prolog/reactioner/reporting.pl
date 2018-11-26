@@ -23,7 +23,8 @@ dataframe:dataframe(no_parse,
                       textdef=Def]-no_parse(C,Def),
                      [rhea=X]-entity_xref_prefix(C,X,"RHEA"),
                      [ec=X]-entity_xref_prefix(C,X,"EC"),
-                     [metacyc=X]-entity_xref_prefix(C,X,"MetaCyc")
+                     [metacyc=X]-entity_xref_prefix(C,X,"MetaCyc"),
+                     [is_leaf=IsLeaf]-(owl:subClassOf(_,C) -> IsLeaf=false ; IsLeaf=true)
                     ],
                     [entity(class),
                      description('GO CAs whose text definitions could not be parsed to reactions')]).

@@ -2,6 +2,8 @@
 
  * [go-no-parse.tsv](go-no-parse.tsv)
 
+Many of these are not a concern as we don't expect to be able to parse grouping reactions. However, we might expect that anything with a RHEA xref should be parseable. We also might expect anything that is a leaf node to be parseable.
+
 Sample:
 
 |class|class label|textdef|rhea|ec|metacyc
