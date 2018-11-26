@@ -15,7 +15,8 @@
 
 dataframe:dataframe(catalytic_activity,
                     [[class=C]-catalytic_activity(C)],
-                    [entity(class)]).
+                    [entity(class),
+                     description('All catalytic activities in GO')]).
 
 dataframe:dataframe(no_parse,
                     [[class=C,
@@ -24,7 +25,8 @@ dataframe:dataframe(no_parse,
                      [ec=X]-entity_xref_prefix(C,X,"EC"),
                      [metacyc=X]-entity_xref_prefix(C,X,"MetaCyc")
                     ],
-                    [entity(class)]).
+                    [entity(class),
+                     description('GO CAs whose text definitions could not be parsed to reactions')]).
 
 dataframe:dataframe(check_rhea_xref,
                     [
@@ -40,7 +42,8 @@ dataframe:dataframe(check_rhea_xref,
                     ],
                     [entity(class),
                      entity(rhea),
-                     entity(info)]).
+                     entity(info),
+                     description('test if RHEA xref has a reaction that matches the parsed GO reaction')]).
 
 dataframe:dataframe(rhea_derived_synonyms,
                     [
@@ -49,7 +52,10 @@ dataframe:dataframe(rhea_derived_synonyms,
                       info=Info,
                       score=Score]-rhea_derived_synonym(Cls,N,Info,Score)
                     ],
-                   [entity(class)]).
+                   [entity(class),
+                    description('suggested synonyms for CHEBI IDs derived from name used in RHEA.
+                               If the string is unused elsewhere in chebi info=newsyn, otherwise info-ambiguous')]).
+
 
 dataframe:dataframe(chebi_no_match,
                     [
@@ -66,5 +72,8 @@ dataframe:dataframe(chebi_no_match,
                      [metacyc=X]-entity_xref_prefix(C,X,"MetaCyc")
                     ],
                     [entity(class),
-                     entity(rhea_chebi_id)]).
+                     entity(rhea_chebi_id),
+                     description('Participant strings in a GO reaction def that can not be recognized directly in CHEBI.
+                                If a RHEA match is available we show this')]).
+
 
