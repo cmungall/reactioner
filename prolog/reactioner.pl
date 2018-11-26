@@ -417,8 +417,8 @@ rhea_derived_synonym(Cls,N,Info,Score) :-
         ensure_atom(NLit,N1),
         atom_concat('a ',N,N1),
         \+ basic_annot(Cls,_,N,_),
-        setif((basic_annot(XCls,_,N,_),basic_annot(XCls,label,XN,_)),
-              Info,ambiguous(XCls/XN),newsyn),
+        setif((basic_annot(XCls,_,N,_)),
+              Info,ambiguous(XCls),newsyn),
         setif(best_chemterm_lexmatch_id(N,_,[Cls],Score),
               Score,Score,0).
 

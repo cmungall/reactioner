@@ -50,11 +50,13 @@ dataframe:dataframe(rhea_derived_synonyms,
                      [class=Cls,
                       rhea_name=N,
                       info=Info,
-                      score=Score]-rhea_derived_synonym(Cls,N,Info,Score)
+                      score=Score]-rhea_derived_synonym(Cls,N,Info,Score),
+                     [ambiguous_with=A]-(Info=ambiguous(A))
                     ],
-                   [entity(class),
-                    description('suggested synonyms for CHEBI IDs derived from name used in RHEA.
-                               If the string is unused elsewhere in chebi info=newsyn, otherwise info-ambiguous')]).
+                    [entity(class),
+                     entity(ambiguous_with),
+                     description('suggested synonyms for CHEBI IDs derived from name used in RHEA.
+                                If the string is unused elsewhere in chebi info=newsyn, otherwise info-ambiguous')]).
 
 
 dataframe:dataframe(chebi_no_match,
