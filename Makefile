@@ -29,8 +29,14 @@ t-%:
 # --------------------
 # Reports
 # --------------------
+
+REPORTS = go-activities xref-summary go-no-parse go-rhea-check go-rhea-newsyns chebi-no-match.tsv
+all_reports: $(patsubst %,reports/%.tsv,$(REPORTS))
+
 reports/go-activities.tsv:
 	./bin/reactioner -i data/chebi.owl.gz -i data/go-ca.ttl.gz report catalytic_activity > $@.tmp && mv $@.tmp $@
+reports/xref-summary.tsv:
+	./bin/reactioner -i data/chebi.owl.gz -i data/go-ca.ttl.gz report xref_summary > $@.tmp && mv $@.tmp $@
 
 reports/go-no-parse.tsv:
 	./bin/reactioner -i data/chebi.owl.gz -i data/go-ca.ttl.gz report no_parse > $@.tmp && mv $@.tmp $@

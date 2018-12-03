@@ -1,6 +1,26 @@
+## GO Xref Summary
+
+ * [xref-summary.tsv](xref-summary.tsv)
+
+Summary of all xrefs provided by GO
+
+Sample:
+
+|class|class label|rhea|ec|metacyc|is_leaf^M|
+|---|---|---|---|---|---|
+|GO:0004133|glycogen debranching enzyme activity||||false^M|
+|GO:0009975|cyclase activity||||false^M|
+|GO:0004134|4-alpha-glucanotransferase activity||EC:2.4.1.25|MetaCyc:AMYLOMALT-RXN,MetaCyc:RXN-1828,MetaCyc:RXN-9023|true^M|
+|GO:0047805|cytidylate cyclase activity|RHEA:14737|EC:4.6.1.6|MetaCyc:CYTIDYLATE-CYCLASE-RXN|true^M|
+|GO:0047820|D-glutamate cyclase activity|RHEA:22360|EC:4.2.1.48|MetaCyc:D-GLUTAMATE-CYCLASE-RXN|true^M|
+
+
+
 ## GO Text Defs that cannot be parsed
 
  * [go-no-parse.tsv](go-no-parse.tsv)
+
+Report for every catalytic activity in GO, showing where we are not able to parse the reaction text definition using reactionER.
 
 Many of these are not a concern as we don't expect to be able to parse grouping reactions. However, we might expect that anything with a RHEA xref should be parseable. We also might expect anything that is a leaf node to be parseable.
 

@@ -18,6 +18,16 @@ dataframe:dataframe(catalytic_activity,
                     [entity(class),
                      description('All catalytic activities in GO')]).
 
+dataframe:dataframe(xref_summary,
+                    [[class=C]-catalytic_activity(C,Def),
+                     [rhea=X]-entity_xref_prefix(C,X,"RHEA"),
+                     [ec=X]-entity_xref_prefix(C,X,"EC"),
+                     [metacyc=X]-entity_xref_prefix(C,X,"MetaCyc"),
+                     [is_leaf=IsLeaf]-(owl:subClassOf(_,C) -> IsLeaf=false ; IsLeaf=true)
+                    ],
+                    [entity(class),
+                     description('Summary of xrefs of all CAs')]).
+
 dataframe:dataframe(no_parse,
                     [[class=C,
                       textdef=Def]-no_parse(C,Def),

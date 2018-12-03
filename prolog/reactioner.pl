@@ -18,6 +18,7 @@
 :- module(reactioner,
           [op(700,xfy,<=>),
            catalytic_activity/1,
+           catalytic_activity/2,
            index_chebi/0,
            chemical_elqs/2,
            sum_all_elqs/2,
@@ -78,8 +79,14 @@ index_chebi :-
         materialize_index(basic_annot(+,+,-,-)).
 
 catalytic_activity(X) :-
-        rdfs_subclass_of(X,ca:'').
+        rdfs_subclass_of(X,ca:''),
+        \+ rdf_global_id(ca:'',X).
+
         
+catalytic_activity(X, Def) :-
+        catalytic_activity(X),
+        rdf(X,def:'',DefLit),        
+        ensure_atom(DefLit,Def).
 
 
 no_parse(X,Def) :-

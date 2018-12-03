@@ -2,18 +2,10 @@
 
 Parses textual descriptions of reactions into pathways and OWL expressions
 
-## Usage (via Docker)
 
-Currently the recommended way to do this is on the command line via the [reactioner.sh](reactioner.sh) bash script:
+## Installation
 
-```
-./reactioner.sh 
-```
-
-You do not need to install anything other than [Docker](http://docker.com/get-docker). The shell script is standalone.
-
-
-## Running without docker
+(NOTE: we will soon have docker which will be easier)
 
 Install SWI-Prolog from http://www.swi-prolog.org
 
