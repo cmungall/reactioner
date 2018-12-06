@@ -26,6 +26,16 @@ coverage:
 t-%:
 	$(SWIPL) -l tests/$*_test.pl -g run_tests,halt
 
+
+data/rhea-tsv.tar.gz:
+	wget ftp://ftp.ebi.ac.uk/pub/databases/rhea/tsv/rhea-tsv.tar.gz -O $@
+
+tsv: data/rhea-tsv.tar.gz
+	tar -zxvf $<
+
+data/rhea_xrefs.pro: tsv/rhea2xrefs.tsv
+	grep -v UNIPROT $< | ./util/xreftsv2pro.pl > $@
+
 # --------------------
 # Reports
 # --------------------
