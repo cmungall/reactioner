@@ -198,75 +198,10 @@ run(index, _, Opts) :-
         option(output(Out),Opts,'tmp/reactions.pro'),
         materialize_index_to_file(mf_reaction(-,-,-,-,-),Out).
 
-run(show, _, _Opts) :-
-        G = mf_reaction(_,_,_,_,_),
-        forall(G,
-               write_result_wrap(G,[format(tsv)])).
-
-run(no_parse, _, _Opts) :-
-        dataframe_to_csv(no_parse,[]).
 
 run(report, [Name|_], _Opts) :-
         dataframe_to_csv(Name,[]).
 
-
-
-run(badchebi, _, Opts) :-
-        G = mf_chemical_noparse(_,_,_,_), 
-        forall(G,
-               write_result_wrap(G,[format(tsv)|Opts])).
-
-run(rhea_synonyms, _, Opts) :-
-        G = rhea_derived_synonym(_,_,_,_),
-        %write_result_wrap(header(chebi,new_syn,info,score),
-        %                  [format(tsv)|Opts]),
-        forall(G,
-               write_result_wrap(G,[format(tsv)|Opts])).
-
-run(check_rhea, _, Opts) :-
-        G = rhea_rpt(_,_,_,_,_,_,_,_),
-        write_result_wrap(header(go,rhea,def,op,goleft,goright,is_match,info),
-                          [format(tsv)|Opts]),
-        forall(G,
-               write_result_wrap(G,[format(tsv),
-                                    header([go,rhea,def,op,goleft,goright,is_match,info])|
-                                   Opts])).
-
-rhea_rpt(C,X,Def,Op,L,R,Type,M) :-
-        rdf(C,'http://purl.obolibrary.org/obo/IAO_0000115',Def^^_),
-        check_rhea(C,Re,X,M,Type),
-        (   Re=..[Op,L,R]
-        ->  true
-        ;   Op=none,L=none,R=none).
-
-
-mf_chemical_noparse(CN,A,Def,Xs) :-
-        mf_reaction(A,Def,R,_,_),
-        reactioner:reaction_participant(R,C),
-        rdf_global_id(noparse:CN,C),
-        solutions(X,rdf(A,oio:hasDbXref,X^^_),Xs).
-
-
-
-write_result_wrap(G,Opts) :-
-        select(inject_labels(Inject),Opts,Opts2),
-        nonvar(Inject),
-        Inject,
-        !,
-        G =.. [P,A,B,C|Rest],
-        obj_label(A,NameA),
-        obj_label(B,NameB),
-        obj_label(C,NameC),
-        G2 =.. [P,A,NameA,B,NameB,C,NameC|Rest],
-        write_result_wrap(G2,Opts2).
-write_result_wrap(G,Opts) :-
-        write_result(G,Opts).
-
-obj_label(X,N) :-
-        rdf_is_iri(X),
-        rdf(X,rdfs:label,N),
-        !.
-obj_label(_,'') :- !.
 
 
 

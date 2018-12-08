@@ -47,16 +47,12 @@ reports/go-activities.tsv:
 	./bin/reactioner -i data/chebi.owl.gz -i data/go-ca.ttl.gz report catalytic_activity > $@.tmp && mv $@.tmp $@
 reports/xref-summary.tsv:
 	./bin/reactioner -i data/chebi.owl.gz -i data/go-ca.ttl.gz report xref_summary > $@.tmp && mv $@.tmp $@
-
 reports/go-no-parse.tsv:
 	./bin/reactioner -i data/chebi.owl.gz -i data/go-ca.ttl.gz report no_parse > $@.tmp && mv $@.tmp $@
-
 reports/go-rhea-check.tsv:
 	./bin/reactioner -l -v -T -i data/rhea.rdf.gz -i data/chebi.owl.gz -i data/go-ca.ttl.gz report check_rhea_xref > $@.tmp && mv $@.tmp $@
-
 reports/go-rhea-newsyns.tsv:
 	./bin/reactioner -l -v -T -i data/rhea.rdf.gz -i data/chebi.owl.gz report  rhea_derived_synonyms > $@.tmp && mv $@.tmp $@
-
 reports/chebi-no-match.tsv:
 	./bin/reactioner -l -v -T -i data/rhea.rdf.gz -i data/go-ca.ttl.gz -i data/chebi.owl.gz report  chebi_no_match > $@.tmp && mv $@.tmp $@
 

@@ -7,8 +7,10 @@ RUN mkdir /data && curl -L http://purl.obolibrary.org/obo/chebi.owl -o /data/che
 ADD ./prolog/ /tools/prolog
 ADD ./bin/ /tools/bin
 ADD ./utf8.pl /tools/
+ADD ./install.pl /tools/
+ADD ./pack.pl /tools/
 WORKDIR /tools
-RUN swipl -g "Opts=[interactive(false)],pack_install(index_util,Opts),pack_install(sparqlprog,Opts),pack_install(dcg_util,Opts),pack_install(rdf_matcher,Opts),halt"
+RUN swipl -l install -g install,halt
 ENV PATH "/tools/bin:$PATH"
 
 EXPOSE ${PORT}

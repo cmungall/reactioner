@@ -1,11 +1,11 @@
-name(rdf_matcher).
-title('RDF matching utils').
-version('0.1.0').
+name(reactioner).
+title('reaction matching util').
+version('0.0.1').
 author('Chris Mungall','cmungall@gmail.com').
 packager('Chris Mungall','cmungall@gmail.com').
-home('https://github.com/cmungall/index_util').
-download('https://github.com/cmungall/rdf_matcher/releases/*.zip' ).
+home('https://github.com/cmungall/reactioner').
+download('https://github.com/cmungall/reactioner/releases/*.zip' ).
 requires(sparqlprog).
 requires(index_util).
-requires(dcg_util).
+requires(rdf_matcher).
 

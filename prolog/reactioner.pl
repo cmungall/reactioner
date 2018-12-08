@@ -75,20 +75,29 @@ solutions(_,_,[]).
 :- rdf_register_ns(noparse, 'http://x.org/noparse#').
 :- rdf_register_ns(modified_chemical, 'http://x.org/modified_chebi#').
 
+%! index_chebi is det.
+%
+%   materialize index for CHEBI ontology metadata
 index_chebi :-
         materialize_index(basic_annot(+,+,-,-)).
 
+%! catalytic_activity(?Activity) is nondet
+%! catalytic_activity(?Activity, ?TextDef:atom) is nondet
+%
+%   true if Activity is a GO URI for a catalytic activity
 catalytic_activity(X) :-
         rdfs_subclass_of(X,ca:''),
         \+ rdf_global_id(ca:'',X).
 
-        
 catalytic_activity(X, Def) :-
         catalytic_activity(X),
         rdf(X,def:'',DefLit),        
         ensure_atom(DefLit,Def).
 
 
+%! no_parse(?Activity,?Def:atom) is nondet
+%
+%   true if Def is text def for Activity, and Def cannot be parsed
 no_parse(X,Def) :-
         catalytic_activity(X),
         has_def(X,Def),
@@ -98,31 +107,11 @@ chebi_no_parse(X,N) :-
         rdf(X,rdfs:label,N),
         rdf_global_id(noparse:_,X).
 
+% definition for a class as an atom
 has_def(X,Def) :-
         rdf(X,def:'',DefLit),        
         ensure_atom(DefLit,Def).
 
-:- table defn_reaction/4.
-defn_reaction(Def,R,S,B) :-
-        atom_codes(Def,Codes),
-        phrase(godef(R1), Codes),
-        match_chemicals(R1,R,S1),
-        balance(R,B,Penalty),
-        S is S1-Penalty.
-
-:- table candidate_mf_reaction/5.
-candidate_mf_reaction(X,Def,R,S,B) :-
-        has_def(X,Def),
-        defn_reaction(Def,R,S,B).
-
-mf_reaction(X,R) :-
-        mf_reaction(X,_Def,R,_S,_B).
-
-mf_reaction_det(X,R) :- mf_reaction(X,R),!.
-
-
-%index_candidates :-
-%        materialize_index( candidate_mf_reaction(+,+,
 
 %% mf_reaction(?GoCls, ?GoDef, ?ReactionExpr, ?Score, ?Balance) is nondet
 %
@@ -131,6 +120,41 @@ mf_reaction(X,Def,R,S,B) :-
         candidate_mf_reaction(X,Def,R,S,B),
         \+ ((candidate_mf_reaction(X,_,_R2,S2,_),
              S2 > S)).
+
+% shortcut for above
+mf_reaction(X,R) :-
+        mf_reaction(X,_Def,R,_S,_B).
+
+
+:- table candidate_mf_reaction/5.
+%! candidate_mf_reaction(?Actvity, ?Def:atom, ?ReactionExpr, ?Score, ?Balanced) is nondet
+candidate_mf_reaction(X,Def,R,S,B) :-
+        has_def(X,Def),
+        defn_reaction(Def,R,S,B).
+
+:- table defn_reaction/4.
+%! defn_reaction(+Def:atom, ?ReactionExpr, ?Score, ?Balanced) is nondet
+%
+%   parse a text def to a reaction.
+%
+%   The parse is two-part
+%    1. The text is parsed using a DCG
+%    2. The elements of the parse tree are mapped to chemical IDs
+%
+%   Both steps are non-deterministic, so this goal may succeed
+%   multiple times with different parse trees and different 
+%   chebi IDs.
+%   
+%   Each such parse is scored, CHEBI labels are scored more highly
+defn_reaction(Def,R,S,B) :-
+        atom_codes(Def,Codes),
+        phrase(godef(R1), Codes),
+        match_chemicals(R1,R,S1),
+        balance(R,B,Penalty),
+        S is S1-Penalty.
+
+
+%mf_reaction_det(X,R) :- mf_reaction(X,R),!.
 
 
 
@@ -217,8 +241,8 @@ match_chemical(Tok, URI/Term, -100) :-
         rdf_assert(URI, rdfs:label, Term@en).
 
 
-
-% creates a dynamic expression
+% some parses result in chemical terms like "foo (modifier)"
+% we create a dynamic expression for these
 create_expression(BaseCls,Mod,Cls) :-
         concat_atom([BaseCls, ' (',Mod,')'],A),
         rdf_global_id(modified_chemical:A,Cls).
@@ -332,6 +356,7 @@ side_participants(Side,Ps) :-
 % matching rhea
 % ----------------------------------------
 
+% e.g "RHEA:123" -> URI
 expand_xref(X,URI) :-
         ensure_atom(X,X2),
         concat_atom(['RHEA',Local],':',X2),
@@ -357,8 +382,9 @@ best_rhea_match(C,Re,_,0,[],nomatch) :-
 best_rhea_match(_,no_reaction,_,0,[],no_reaction_parse) :-
         !.
 
-        
+
 :- table rhea_match/5.
+%! rhea_match(+Cls, ?ReactionExpr, ?Xref, ?Score, ?Match, ?Type) is nondet
 rhea_match(C,Re,X,S,M,Type) :-
         cls_xref_uri(C,X),
         candidate_mf_reaction(C,_,Re,S1,_),
@@ -367,6 +393,10 @@ rhea_match(C,Re,X,S,M,Type) :-
         ->  S is S1 + 10
         ;   S=S1).
 
+%! align_reaction(+ReactionExpr, ?Xref, ?Match, ?Type) is nondet
+%
+%  given a reaction expression, find a matching RHEA reaction, where the participants
+%  strictly match
 align_reaction(Re,X,M,Type) :-
         reaction_participants(Re,Ps),
         rhea:reaction(X),
