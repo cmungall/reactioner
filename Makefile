@@ -36,6 +36,10 @@ tsv: data/rhea-tsv.tar.gz
 data/rhea_xrefs.pro: tsv/rhea2xrefs.tsv
 	grep -v UNIPROT $< | ./util/xreftsv2pro.pl > $@
 
+# generate new CHEBI synonyms based on how RHEA maps its labels to CHEBI IDs
+data/gensyns.rdf:
+	./bin/reactioner -i data/rhea.rdf.gz -i data/chebi.owl.gz -i data/go-ca.ttl.gz -o $@ gensyns
+
 # --------------------
 # Reports
 # --------------------
@@ -55,6 +59,10 @@ reports/go-rhea-newsyns.tsv:
 	./bin/reactioner -l -v -T -i data/rhea.rdf.gz -i data/chebi.owl.gz report  rhea_derived_synonyms > $@.tmp && mv $@.tmp $@
 reports/chebi-no-match.tsv:
 	./bin/reactioner -l -v -T -i data/rhea.rdf.gz -i data/go-ca.ttl.gz -i data/chebi.owl.gz report  chebi_no_match > $@.tmp && mv $@.tmp $@
+reports/new_rhea_match.tsv:
+	./bin/reactioner -l -v -T -i data/gensyns.rdf -i data/rhea.rdf.gz -i data/go-ca.ttl.gz -i data/chebi.owl.gz report  new_rhea_match > $@.tmp && mv $@.tmp $@
+reports/non_catalytic_activity_with_rhea_xref.tsv:
+	./bin/reactioner -l -v -T -i data/go-ca.ttl.gz report non_catalytic_activity_with_rhea_xref > $@.tmp && mv $@.tmp $@
 
 # --------------------
 # Docker

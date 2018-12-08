@@ -1,5 +1,4 @@
 :- use_module(library(reactioner)).
-:- use_module(library(reactioner/learner)).
 :- use_module(library(rdf_matcher)).
 :- use_module(library(sparqlprog/labelutils)).
 :- use_module(library(sparqlprog/ontologies/rhea),[]).

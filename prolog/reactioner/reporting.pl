@@ -18,8 +18,18 @@ dataframe:dataframe(catalytic_activity,
                     [entity(class),
                      description('All catalytic activities in GO')]).
 
+dataframe:dataframe(non_catalytic_activity_with_rhea_xref,
+                    [[class=C,
+                      rhea=X]-(owl:class(C),
+                               cls_rhea_xref_uri(C,X),
+                               \+ catalytic_activity(C))
+                    ],
+                    [entity(class),
+                     entity(rhea),
+                     description('All GO classes with rhea xrefs that are not CAs (we expect this to be empty)')]).
+
 dataframe:dataframe(xref_summary,
-                    [[class=C]-catalytic_activity(C,Def),
+                    [[class=C]-catalytic_activity(C),
                      [rhea=X]-entity_xref_prefix(C,X,"RHEA"),
                      [ec=X]-entity_xref_prefix(C,X,"EC"),
                      [metacyc=X]-entity_xref_prefix(C,X,"MetaCyc"),
@@ -56,15 +66,47 @@ dataframe:dataframe(check_rhea_xref,
                      entity(info),
                      description('test if RHEA xref has a reaction that matches the parsed GO reaction')]).
 
+dataframe:dataframe(new_rhea_match,
+                    [
+                     [class=A,
+                      op=Op,
+                      goleft=L,
+                      goright=R,
+                      rhea=X,
+                      score=S,
+                      info=Info]-(new_rhea_match(A,Re,X,S,Info),
+                                  Re=..[Op,L,R]),
+                     [def=Def]-rdf(A,'http://purl.obolibrary.org/obo/IAO_0000115',Def)
+                    ],
+                    [entity(class),
+                     entity(rhea),
+                     entity(info),
+                     description('Find new rhea xrefs')]).
+
+dataframe:dataframe(rhea_derived_synonyms_minimal,
+                    [
+                     [class=Cls,
+                      rhea_name=N,
+                      info=Info,
+                      score=Score]-rhea_derived_synonym(R,Cls,N,Info,Score),
+                     [ambiguous_with=A]-(Info=ambiguous(A))
+                    ],
+                    [entity(class),
+                     entity(ambiguous_with),
+                     description('suggested synonyms for CHEBI IDs derived from name used in RHEA.
+                                If the string is unused elsewhere in chebi info=newsyn, otherwise info-ambiguous')]).
+
 dataframe:dataframe(rhea_derived_synonyms,
                     [
                      [class=Cls,
                       rhea_name=N,
                       info=Info,
-                      score=Score]-rhea_derived_synonym(Cls,N,Info,Score),
+                      score=Score,
+                      rhea=Rs]-setof(R,rhea_derived_synonym(R,Cls,N,Info,Score),Rs),
                      [ambiguous_with=A]-(Info=ambiguous(A))
                     ],
                     [entity(class),
+                     entity(rhea),
                      entity(ambiguous_with),
                      description('suggested synonyms for CHEBI IDs derived from name used in RHEA.
                                 If the string is unused elsewhere in chebi info=newsyn, otherwise info-ambiguous')]).

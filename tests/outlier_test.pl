@@ -25,8 +25,8 @@ load_test_file_and_index :-
 
 showall(G) :-
         format('Testing: ~q~n',[G]),
-        forall((G,term_labelify(G,G2),
-               format('~q.~n',[G2])),
+        forall((G,term_labelify(G,G2)),
+                format('~q.~n',[G2])),
         format('DONE: ~q~n',[G]).
 
 

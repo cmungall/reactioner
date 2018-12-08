@@ -1,0 +1,1173 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE rdf:RDF [
+    <!ENTITY oio 'http://www.geneontology.org/formats/oboInOwl#'>
+    <!ENTITY rdf 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+    <!ENTITY xsd 'http://www.w3.org/2001/XMLSchema#'>
+]>
+
+<rdf:RDF
+    xmlns:oio="&oio;"
+    xmlns:rdf="&rdf;"
+    xmlns:xsd="&xsd;"
+>
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_65213">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">2-acyl-sn-glycero-3-phosphoethanolamine</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_138951">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">3'-hydroxy,5'-unsubstituted flavanone</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_57930">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">ribonucleoside 5'-diphosphate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_58608">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1,2-diacyl-sn-glycero-3-phosphate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_29067">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">carboxylate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_59871">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">D-amino acid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_85638">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">haloacetate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_140764">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">beta-D-galactosyl-(1-&gt;3)-[N-acetyl-alpha-neuraminyl-(2-&gt;6)]-N-acetyl-alpha-D-galactosaminyl derivative</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_64612">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1,2-diacyl-sn-glycero-3-phosphoethanolamine</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_65317">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">2'-deoxyribonucleoside 5'-phosphate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_68671">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">CMP-N-acyl-beta-neuraminate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_132124">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">quinone</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_16291">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1-O-alkyl-2-acetyl-sn-glycerol</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_58332">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">CDP-1,2-diacyl-sn-glycerol</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_35179">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">2-oxocarboxylate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_57265">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">6-(N-acetyl-alpha-D-glucosaminyl)-1-phosphatidyl-1D-myo-inositol</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_57997">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">6-(alpha-D-glucosaminyl)-1-phosphatidyl-1D-myo-inositol</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_17615">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1,2-diacyl-3-O-(beta-D-galactosyl)-sn-glycerol</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_77450">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">monoamide of a dicarboxylate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_35757">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">monocarboxylate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_136853">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">3-(acyloxy)acyl derivative of bacterial toxin</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_17855">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">triacylglycerol</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_28868">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">fatty acid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_18035">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">diacylglycerol</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_22801">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">beta-D-glucosyl-(1&lt;-&gt;1')-N-acylsphing-4-enine</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33853">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">phenol</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_140317">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">phenyl sulfate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_58088">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1,2-diacyl-sn-glycero-3-phospho-(1D-myo-inositol 3-phosphate)</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_57880">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1,2-diacyl-sn-glycero-3-phospho-(1D-myo-inositol)</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_24646">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">quinol</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_58043">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">ribonucleoside 5'-phosphate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_77452">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">2-deoxystreptamine antibiotic</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_57921">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">N(3')-acetyl-2-deoxystreptamine antibiotic</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_61560">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">2'-deoxyribonucleoside 5'-triphosphate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_61557">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">ribonucleoside 5'-triphosphate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_37581">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1,4-lactone</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_136596">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">4-hydroxyacid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_58168">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1-acyl-sn-glycero-3-phosphocholine</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_83408">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">sn-glycero-3-phosphoester</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_133507">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">beta-D-galactosyl-(1-&gt;4)-N-acetyl-beta-D-glucosaminyl derivative</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_140358">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">monosaccharide 1-phosphate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_140359">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">UDP-monosaccharide</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_35915">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">steryl ester</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_47788">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">3-oxosteroid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_20156">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">3-oxo-Delta(1)-steroid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_138238">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">pyrimidine ribonucleoside 5'-phosphate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_57560">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">long-chain fatty acid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_57923">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1,2-diacyl-sn-glycero-3-phospho-(1D-myo-inositol-3,5-bisphosphate)</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_47909">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">3-oxo-Delta(4)-steroid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_136913">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">monoacylglycerophospholipid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_64982">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">2-acyl-sn-glycerol 3-phosphate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_137941">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">beta-D-galactosyl-(1-&gt;4)-[alpha-L-fucosyl-(1-&gt;3)]-N-acetyl-beta-D-glucosaminyl derivative</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_134225">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1,4-benzosemiquinone</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_83724">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">very-long-chain 2,3-saturated fatty acyl-CoA</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_83728">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">very-long-chain (2E)-enoyl-CoA</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_83723">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">medium-chain 2,3-saturated fatty acyl-CoA</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_83726">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">medium-chain trans-(2E)-enoyl-CoA</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_66954">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">nucleoside 2',3'-cyclic phosphate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_78552">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">nucleoside 2'-phosphate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_58464">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">nucleoside 3',5'-cyclic phosphate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_57867">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">nucleoside 5'-phosphate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_62031">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">polar amino acid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_16247">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">phospholipid derivative</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_67140">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">phosphate monoester</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_13197">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">ribonucleoside 3'-phosphate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_17408">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">monoacylglycerol</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_83139">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">long-chain fatty acyl-CoA</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_133470">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">beta-D-galactosyl-(1-&gt;3)-N-acetyl-alpha-D-galactosaminyl derivative</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_28250">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">6-acetyl-beta-D-galactoside</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_17354">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">16beta-hydroxysteroid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_87082">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1,2-diacyl-3-O-[beta-D-galactosyl-(1-&gt;6)-beta-D-galactosyl]-sn-glycerol</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_57739">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1,2-diacylglycero-3-phosphate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_57318">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">(3S)-hydroxyacyl-CoA</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_58856">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">(2E)-enoyl CoA</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_27741">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">3'-hydroxyflavone</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_60522">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">phosphatidylglycerol phosphate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_60523">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">phosphatidylglycerol</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_17389">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">2-acylglycerol</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_49172">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1,2-diacylglycerol</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_35348">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">3beta-hydroxysterol</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_18063">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">2-acyl-3-O-(beta-D-galactosyl)-sn-glycerol</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_75799">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1,2-diacyl-3-O-(beta-D-glucopyranosyl)-sn-glycerol</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_140310">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">phenyl acetate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_83411">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">beta-D-glucuronoside</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_83721">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">long-chain 2,3-saturated fatty acyl-CoA</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_83727">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">long-chain (2E)-enoyl-CoA</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_17002">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">cholesterol ester</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33566">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">catechol</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_134251">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">guaiacol</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_55465">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">7-hydroxyisoflavone</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_140356">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">7-methoxyisoflavone</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_64771">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1-acyl-sn-glycero-3-phospho-(1D-myo-inositol)</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_65111">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">2,3-saturated acyl-CoA</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_65295">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">phtalamide</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_65296">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">primary amine</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_59876">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">N-acyl-D-amino acid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_138483">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">cis-3-alkyl-4-alkyloxetan-2-one</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_140303">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">beta-D-galactosyl-(1-&gt;4)-beta-D-glucosyl derivative</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_140302">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">beta-D-galactosyl-(1-&gt;3)-beta-D-galactosyl-(1-&gt;4)-beta-D-glucosaminyl derivative</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_139604">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">beta-D-galactosyl-(1-&gt;3)-[N-acetyl-beta-D-glucosaminyl-(1-&gt;6)]-N-acetyl-alpha-D-galactosaminyl derivative</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_136891">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">2'-unsubstituted isoflavone</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_28206">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">2'-hydroxyisoflavone</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_138441">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">(3R,4R)-3-alkanoyl-4-(hydroxymethyl)oxolan-2-one</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_140559">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">N-acetyl-alpha-D-galactosaminyl-(1-&gt;3)-[alpha-L-fucosyl-(1-&gt;2)]-beta-D-galactose group</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_134019">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">hydroperoxy polyunsaturated fatty acid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_131871">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">hydroxy polyunsaturated fatty acid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_17670">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1,2-diacyl-3-O-(alpha-D-glucopyranosyl)-sn-glycerol</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_139291">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">chlorophyll</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_139292">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">chlorophyllide</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_66949">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">nucleoside 3'-phosphate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_28991">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">D-threo-aldono-1,5-lactone</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_57970">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1-acyl-sn-glycero-3-phosphate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_142355">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">purine D-ribonucleoside</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_47786">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">16-oxosteroid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_58034">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">flavonol 3-O-(6-O-malonyl-beta-D-glucoside)</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_35349">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">7beta-hydroxysteroid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_47789">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">7-oxosteroid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_140347">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">substituted beta-amino acid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_138482">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">lyso-ornithine lipid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_137480">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">4-saturated-(3S)-hydroxyacyl-CoA</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_58521">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">(3E)-enoyl-CoA</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_131705">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">2'-deoxyribonucleoside 3'-phosphate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_83628">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">monocarboxylic acid amide</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_73359">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">2,3-saturated aldehyde</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_52501">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">2-hydroxycarbonyl</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_28802">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">flavonol</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_58456">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1,2-diacyl-sn-glycero-3-phospho-(1D-myo-inositol-4,5-bisphosphate)</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_57836">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1,2-diacyl-sn-glycero-3-phospho-(1D-myo-inositol-3,4,5-trisphosphate)</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_90726">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">3-oxoacyl-CoA</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_17473">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1-O-alkyl-2-acetyl-3-acyl-sn-glycerol</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_52268">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">flavonol 3-O-[6-(4-coumaroyl)-beta-D-glucosyl-(1-&gt;2)-beta-D-glucosyl-(1-&gt;2)-beta-D-glucoside]</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_57319">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">(3R)-hydroxyacyl-CoA</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_60015">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">2,3-dehydroacyl-CoA</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_139120">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">carotenoid beta-end derivative</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_139129">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">carotenoid phi-end derivative</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_17952">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">flavonol 3-O-[alpha-L-rhamnosyl-(1-&gt;6)-beta-D-glucoside]</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33184">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">long-chain acyl-CoA</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_131823">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">methylated primary amine</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_60090">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">7-O-hydroxy-flavonol</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_73316">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">2'-deoxyribonucleoside 5'-diphosphate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_133506">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">beta-D-galactosyl-(1-&gt;3)-N-acetyl-beta-D-glucosaminyl derivative</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_140304">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">beta-D-galactosyl-(1-&gt;3)-[alpha-L-fucosyl-(1-&gt;4)]-N-acetyl-beta-D-glucosaminyl derivative</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_84139">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">myo-inositol phosphate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_35973">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">3-oxo acid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_58534">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">6-phospho-beta-D-galactoside</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_57795">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1,2-diacyl-sn-glycero-3-phospho-(1D-myo-inositol-5-phosphate)</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_58855">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">secondary aliphatic amine</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_59996">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1,2-diacyl-sn-glycerol 3-diphosphate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_62237">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">cardiolipin</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_133959">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">4'-methoxyisoflavone</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_140331">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">4'-hydroxyflavanone</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_140332">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">4'-methoxyflavanone</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_90736">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">very-long-chain acyl-CoA</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_90725">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">very-long-chain 3-oxoacyl-CoA</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_136912">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">glycerophospholipid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_64381">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1-acyl-sn-glycero-3-phosphoethanolamine</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_64379">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1-acyl-sn-glycero-3-phospho-L-serine</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_57534">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1-acylglycerone 3-phosphate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_64940">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">N-acyl-4R-hydroxysphinganine-1-phosphoinositol</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_65102">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">3-hydroxyacyl-CoA</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_139066">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">mannosylinositol-1-phosphophytoceramide</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_35759">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1-acylglycerol</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_36836">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">3beta-hydroxysteroid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_142361">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">purine 2'-deoxy-D-ribonucleoside</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_74335">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1-acyl-2-(5Z,8Z,11Z,14Z,17Z-eicosapentaenoyl)-sn-glycero-3-phospho-(1D-myo-inositol)</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_75243">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1-acyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phospho-(1D-myo-inositol)</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_74917">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1-acyl-2-(9Z-octadecenoyl)-sn-glycero-3-phosphate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_74920">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1-acyl-2-(9Z,12Z)-octadecadienoyl-sn-glycero-3-phosphate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_74922">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1-acyl-2-(5Z,8Z,11Z,14Z)-eicosatetraenoyl-sn-glycero-3-phosphate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_75116">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1-acyl-2-(9Z-octadecenoyl)-sn-glycero-3-phospho-(1D-myo-inositol)</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_88240">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">(9Z)-octadecenoyl-containing glycerolipid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_47777">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1,3-diacylglycerol</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_76177">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">(R)-2-hydroxy fatty acid anion</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_77636">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">fatty acyl-CoA</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_76941">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">sphingoid 1-phosphate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_64874">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1-acyl-2-hexadecanoyl-sn-glycero-3-phospho-(1D-myo-inositol)</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_65214">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">2-acyl-sn-glycero-3-phospho-L-serine</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_78428">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1-O-alkyl-2-acyl-3-O-(beta-D-galactosyl)-sn-glycerol</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_78429">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1-O-alkyl-2-acyl-3-(beta-D-3-sulfogalactosyl)-sn-glycerol</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_36498">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">D-galactosylceramide</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_78930">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1-acyl-2-hexanoyl-sn-glycero-3-phospho-(1D-myo-inositol-5-phosphate)</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_78931">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1-acyl-2-hexanoyl-sn-glycero-3-phospho-(1D-myo-inositol)</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_83402">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">ribonucleoside 3',5'-bisphosphate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_84465">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">monoacyl-sn-glycero-3-phosphocholine</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_16456">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">N-(2-hydroxyacyl)sphing-4-enine</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_85097">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">(2E)-enoyl-CoA</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_85110">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">(3E,5Z)-dienoyl-CoA</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_85111">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">(2E,4E)-(5,6-saturated)-dienoyl-CoA</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_84410">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">sphingoid base</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_85440">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">very-long-chain (3R)-hydroxyacyl-CoA</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_88351">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">(9Z,12Z)-octadecadienoyl-containing glycerolipid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_88261">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">(9Z)-hexadecenoyl-containing glycerolipid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_85953">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">(4E,8E)-4-sphinga-4,8-dienine ceramide</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_86266">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">N-[(2'R)-hydroxyacyl]sphinganine</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_86275">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">N-[1,2 saturated-(4R)-hydroxyacyl]sphinganine</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_86274">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">N-[(2'R)-(4R)-hydroxyacyl]sphinganine</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_86999">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1-acyl-2-hexadecanoyl-glycerolipid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_87000">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1-acyl-2-[(7Z)-hexadecenoyl]-glycerolipid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_87003">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1-acyl-2-[(9Z)-hexadecenoyl]-glycerolipid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_87008">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1-[(9Z)-octadecenoyl]-2-acyl-glycerolipid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_87010">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1-[(9Z,12Z)-octadecdienoyl]-2-acyl-glycerolipid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_87017">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1-[(6Z,9Z,12Z)-octadectrienoyl]-2-acyl-glycerolipid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_87023">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1-[(9Z,12Z,15Z)-octadectrienoyl]-2-acyl-glycerolipid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_87024">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1-[(6Z,9Z,12Z,15Z)-octadectetraenoyl]-2-acyl-glycerolipid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_87033">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">9-methyl-(4E,8E)-sphinga-4,8-dienine ceramide</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_87487">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">short-chain 2,3-saturated fatty acyl-CoA</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_87488">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">short-chain (2E)-enoyl-CoA</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_140660">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1-lyso-glycerophospholipid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_59558">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">medium chain fatty acid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_90546">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">medium-chain fatty acyl-CoA</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_90218">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">gentamycin</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_90219">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">gentamycin 2''-phosphate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_90965">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">bacteriochlorophyllide c</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_90969">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">7(1)-hydroxybacteriochlorophyllide c</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_90955">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">bacteriochlorophyllide d</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_90968">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">3-vinylbacteriochlorophyllide d</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_131487">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">6-sulfo-alpha-D-quinovosyldiacylglycerol</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_132040">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">N-fatty acyl-taurine</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_61051">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">hydroperoxy-polyunsaturated fatty acid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_133860">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">hydroxy-polyunsaturated fatty acid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_142198">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">purine 2'-deoxyribonucleoside 5'-phosphate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_134386">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">2-acylphloroglucinol</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_134371">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">2-acyl-4-prenylphloroglucinol</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_134346">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">2-acyl-4,6-diprenylphloroglucinol</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_134348">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">2-acyl-4,6,6-triprenylphloroglucinol</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_136183">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">jasmonyl-L-amino acid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_136184">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">jasmonate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_136512">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">bacteriochlorophyllide e</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_136513">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">7(1),7(1)-dihydroxybacteriochlorophyllide c</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_136562">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">long-chain acyl-AMP</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_136588">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">beta-D-galactosyl-(1-&gt;3)-N-acetyl-beta-D-galactosaminyl derivative</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_136624">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">2,6-O-bis(alpha-D-mannopyranosyl)-1-phosphatidyl-1D-myo-inositol</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_136757">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">long-chain (3S)-hydroxy fatty acyl-CoA</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_136758">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">long-chain 3-oxo-fatty acyl-CoA</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_136760">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">short-chain (3S)-hydroxyacyl-CoA</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_136769">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1,2-diacyl-3-O-[alpha-D-galactopyranosyl-(1-&gt;2)-alpha-D-glucopyranosyl]-sn-glycerol</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_136810">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">12-hydroxyjasmonate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_58951">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">short-chain fatty acid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_137040">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">short chain fatty acyl-CoA</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_137667">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1,2-diacyl-3-O-[beta-D-glucopyranosyl-(1-&gt;6)-beta-D-galactopyranosyl]-sn-glycerol</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_137740">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">UDP-3-O-acyl-alpha-D-glucosamine</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_137748">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">UDP-2-N,3-O-bis((3R)-3-hydroxyacyl)-alpha-D-glucosamine</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_137419">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">secondary amine</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_137984">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">methylated secondary amine</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_137982">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">tertiary amine</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_138068">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">ribonucleoside 5'-diphosphate-alpha-D-glucose</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_138139">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">2,3-bis-O-phytanyl-sn-glycerol 1-phospholipid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_138140">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">2,3-bis-O-(geranylgeranyl)-sn-glycerol 1-phospholipid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_138177">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">4-H-anthocyanidin with a 3-hydroxy group</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_138178">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">(4S)-2,3-dehydroflavan-3,4-diol</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_58950">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">very long-chain fatty acid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_138261">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">very long-chain fatty acyl-CoA</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_138371">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">beta-D-Gal-(1-&gt;4)-beta-D-GlcNAc-(1-&gt;3)-beta-D-Gal-(1-&gt;4)-beta-D-GlcNAc derivative</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_138372">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">beta-D-Gal-(1-&gt;4)-beta-D-GlcNAc-(1-&gt;3)-[beta-D-GlcNAc-(1-&gt;6)]-beta-D-Gal-(1-&gt;4)-N-acetyl-beta-D-glucosaminyl derivative</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_138374">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">12-hydroxyjasmonyl-L-alpha-amino acid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_28863">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">flavanone</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_85489">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">(3Z)-enoyl-CoA</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_24043">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">flavone</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_138464">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">12-hydroxy-12-oxojasmonyl-L-alpha-amino acid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_138463">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">12-oxojasmonyl-L-alpha-amino acid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_138621">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">[(3S)-4-alkanoyl-5-oxooxolan-3-yl]methyl phosphate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_138603">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">(4-alkanoyl-5-oxo-2,5-dihydrofuran-3-yl)methyl phosphate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_138627">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">jasmonyl-L-isoleucinate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_138842">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">3alpha-hydroxy bile acid CoA</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_138843">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">3-oxo bile acid CoA</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_74994">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">mannosylinositol-1-phospho-N-(2-hydroxyacyl)-4R-hydroxysphingoid base</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_59720">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">hydroperoxyeicosatetraenoate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_137328">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">hydroxy epoxy eicosatetraenoate</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_139065">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">mannosylinositol-1-phosphoceramide</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_64997">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">mannosylinositol-1-phospho-N-acyl-sphingoid base</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_139114">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">carotenoid psi-end group</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_139115">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">carotenoid epsilon-end group</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_139130">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">carotenoid chi-end derivative</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_139171">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">2-hydroxyornithine lipid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_139237">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">bacteriochlorophyllide f</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_139240">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">7(1)-hydroxybacteriochlorophyllide d</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_139242">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">7(1),7(1)-dihydroxybacteriochlorophyllide d</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_139508">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">beta-D-galactosyl-(1-&gt;3)-N-acetyl-alpha-D-glucosaminyl derivative</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_140181">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">(3R,4R)-4,2'-dihydroxyisoflavan</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_140183">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">(3R)-2'-hydroxyisoflavanone</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_140277">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">5-hydroxy anthocyanidin</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_140301">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">7-hydroxyisoflavone 7-O-beta-D-glucoside</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_141014">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">pyrimidine ribonucleoside</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_141140">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">medium-chain fatty acyl-AMP</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_141992">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">2-hydroxyflavanone</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_142019">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1-hexacosanoyl-2-acyl-phosphoglycerolipid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_142020">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1-[(17Z)-hexacos-17-enoyl]-2-acyl-phosphoglycerolipid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_142021">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1-tetracosanoyl-2-acyl-phosphoglycerolipid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_142022">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">1-[(15Z)-tetracos-15-enoyl]-2-acyl-phosphoglycerolipid</oio:hasExactSynonym>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_142209">
+  <oio:hasExactSynonym rdf:datatype="&xsd;string">pyrimidine 2'-deoxyribonucleoside 5'-phosphate</oio:hasExactSynonym>
+</rdf:Description>
+
+</rdf:RDF>

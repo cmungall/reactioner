@@ -28,8 +28,11 @@
            reaction_signature/2,
            identical_signature/2,
            identical_signature/4,
+           cls_rhea_xref_uri/2,
+           new_rhea_match/5,
            check_rhea/5,
            rhea_derived_synonym/4,
+           rhea_derived_synonym/5,
            defn_reaction/4,
            mf_reaction/2,
            mf_reaction/5,
@@ -356,18 +359,35 @@ side_participants(Side,Ps) :-
 % matching rhea
 % ----------------------------------------
 
+%! new_rhea_match(?Activity, ?ReactionExpr, ?Xref, ?Score, ?M) is nondet
+new_rhea_match(A,Re,X,S,M) :-
+        catalytic_activity(A),
+        \+ cls_rhea_xref_uri(A,_),
+        rhea_match(A,Re,X,S,M,matched).
+
 % e.g "RHEA:123" -> URI
 expand_xref(X,URI) :-
         ensure_atom(X,X2),
         concat_atom(['RHEA',Local],':',X2),
         rdf_global_id(rh:Local,URI).
 
-cls_xref_uri(C,X) :-
+cls_rhea_xref_uri(C,X) :-
         rdf(C,oio:hasDbXref,XS^^_),
         expand_xref(XS,X).
 
+%! check_rhea(?GoCls, ?ReactionExpr, ?RheaXref, ?Match, ?Info) is nondet
+%! check_rhea(+GoCls, ?ReactionExpr, +RheaXref, ?Match, ?Info) is det
+%
+%  for any GoClas-RheaXref pair (where the xref must be assigned in the ontology),
+%  validate the xref. First parse the definition for the GO Class, then try and
+%  match the participants.
+%
+%  Match = matched | nomatch | no_reaction_parse
+%
+%  if nomatch, then Info = list of all rhea participants
+%  if match, then Info = list of any assumed CHEBI synonyms (for unparsed elements)
 check_rhea(C,Re,X,M,Info) :-
-        cls_xref_uri(C,X),
+        cls_rhea_xref_uri(C,X),
         best_rhea_match(C,Re,X,_S,M,Info).
 
 best_rhea_match(C,Re,X,S,M,Info) :-
@@ -386,7 +406,7 @@ best_rhea_match(_,no_reaction,_,0,[],no_reaction_parse) :-
 :- table rhea_match/5.
 %! rhea_match(+Cls, ?ReactionExpr, ?Xref, ?Score, ?Match, ?Type) is nondet
 rhea_match(C,Re,X,S,M,Type) :-
-        cls_xref_uri(C,X),
+        %cls_rhea_xref_uri(C,X),
         candidate_mf_reaction(C,_,Re,S1,_),
         align_reaction(Re,X,M,Type),
         (   Type=matched
@@ -447,7 +467,9 @@ setif(_,F,_,F).
 
 %! rhea_derived_synonym(ChebiCls:atom, RheaName:atom, Info:info, Score:float) :-
 rhea_derived_synonym(Cls,N,Info,Score) :-
-        rhea:reaction_participant(_R,P),
+        rhea_derived_synonym(_R,Cls,N,Info,Score).
+rhea_derived_synonym(R,Cls,N,Info,Score) :-
+        rhea:reaction_participant(R,P),
         rdf(P,rh:compound,C),
         rdf(C,rh:chebi,Cls),
         rdf(C,rh:name,NLit),
@@ -458,7 +480,6 @@ rhea_derived_synonym(Cls,N,Info,Score) :-
               Info,ambiguous(XCls),newsyn),
         setif(best_chemterm_lexmatch_id(N,_,[Cls],Score),
               Score,Score,0).
-
 
 
 

@@ -198,6 +198,12 @@ run(index, _, Opts) :-
         option(output(Out),Opts,'tmp/reactions.pro'),
         materialize_index_to_file(mf_reaction(-,-,-,-,-),Out).
 
+run(gensyns, _, Opts) :-
+        option(output(Out),Opts,'tmp/gensyns.rdf'),
+        G=syngraph,
+        forall(rhea_derived_synonym(Cls,N,_,_),
+               rdf_assert(Cls,oio:hasExactSynonym,N^^xsd:string,G)),
+        rdf_save(Out,[graph(G)]).
 
 run(report, [Name|_], _Opts) :-
         dataframe_to_csv(Name,[]).

@@ -9,6 +9,7 @@ ADD ./bin/ /tools/bin
 ADD ./utf8.pl /tools/
 ADD ./install.pl /tools/
 ADD ./pack.pl /tools/
+ADD ./void.ttl /tools/
 WORKDIR /tools
 RUN swipl -l install -g install,halt
 ENV PATH "/tools/bin:$PATH"
