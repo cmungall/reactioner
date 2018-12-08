@@ -40,6 +40,10 @@ data/rhea_xrefs.pro: tsv/rhea2xrefs.tsv
 data/gensyns.rdf:
 	./bin/reactioner -i data/rhea.rdf.gz -i data/chebi.owl.gz -i data/go-ca.ttl.gz -o $@ gensyns
 
+# https://github.com/ebi-chebi/ChEBI/issues/3544
+data/fix_chebi_syn.rdf:
+	./bin/reactioner -i data/chebi.owl.gz -o $@ fix_chebi
+
 # --------------------
 # Reports
 # --------------------

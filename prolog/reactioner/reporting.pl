@@ -88,7 +88,7 @@ dataframe:dataframe(rhea_derived_synonyms_minimal,
                      [class=Cls,
                       rhea_name=N,
                       info=Info,
-                      score=Score]-rhea_derived_synonym(R,Cls,N,Info,Score),
+                      score=Score]-rhea_derived_synonym(Cls,N,Info,Score),
                      [ambiguous_with=A]-(Info=ambiguous(A))
                     ],
                     [entity(class),
