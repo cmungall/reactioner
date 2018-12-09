@@ -264,6 +264,10 @@ chemids_lexmatch(L1,L2,S) :-
                       aggregate(max(S1),((member(Y,L2),chem_cls_pair_lexmatch(X,Y
 */
 
+%! chemterm_lexmatch(+N1,+N2,?Score) is det
+%
+%  scores a match between two chemical names;
+%  jaccard index from comparing tokenized name
 chemterm_lexmatch(N1,N2,S) :-
         tokenize_chemical(N1,Toks1),
         tokenize_chemical(N2,Toks2),
