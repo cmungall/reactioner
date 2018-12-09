@@ -143,7 +143,8 @@ dataframe:dataframe(compare_rhea_chebi_names,
                       pred=Pred,
                       xrefs=Xs,
                       chebi=Chebi,
-                      ambigs=Ambigs]-compare_rhea_chebi_names(RN,Pred,Xs,Chebi,Ambigs)
+                      ambigs=Ambigs,
+                      ambig_relations=AmbigRelations]-compare_rhea_chebi_names(RN,Pred,Xs,Chebi,Ambigs,AmbigRelations)
                     ],
                     [sort(rhea_participant),
                      entity(chebi),

@@ -33,7 +33,7 @@
            cls_rhea_xref_uri/2,
            new_rhea_match/5,
            check_rhea/5,
-           compare_rhea_chebi_names/5,
+           compare_rhea_chebi_names/6,
            rhea_derived_synonym/4,
            rhea_derived_synonym/5,
            defn_reaction/4,
@@ -519,12 +519,41 @@ rhea_label_chebi(R,N,Cls) :-
         ;   N=N1).
 
 
-compare_rhea_chebi_names(RN,Pred,Xs,Cls,Ambigs) :-
+compare_rhea_chebi_names(RN,Pred,Xs,Cls,Ambigs,AmbigsRelations) :-
         rhea_label_chebi(_,RN,Cls),
         compare_label(Cls,RN,Pred,Xs),
         (   Pred=label
         ->  Ambigs=[]
-        ;   solutions(P2+C2,(basic_annot(C2,P2,RN,_),C2\=Cls),Ambigs)).
+        ;   solutions(P2+C2,(basic_annot(C2,P2,RN,_),C2\=Cls),Ambigs)),
+        findall(R,((member(_+AmbigC,Ambigs),
+                    relationship_to(AmbigC,Cls,R))),
+                AmbigsRelations).
+
+relationship_to(A,A,identical_to) :- !.
+relationship_to(A,B,direct_subClassOf) :-
+        subClassOf(A,B),
+        !.
+relationship_to(A,B,indirect_subClassOf) :-
+        rdfs_subclass_of(A,B),
+        !.
+relationship_to(A,B,R) :-
+        rdfs_subclass_of(A,AZ),
+        owl_some(AZ,R,BZ),
+        rdfs_subclass_of(B,BZ),
+        !.
+relationship_to(A,B,direct_superClassOf) :-
+        subClassOf(B,A),
+        !.
+relationship_to(A,B,indirect_superClassOf) :-
+        rdfs_subclass_of(B,A),
+        !.
+relationship_to(B,A,R) :-
+        rdfs_subclass_of(A,AZ),
+        owl_some(AZ,R,BZ),
+        rdfs_subclass_of(B,BZ),
+        !.
+relationship_to(_,_,no_relationship) :- !.
+
 
 
 % reification on subject and target
