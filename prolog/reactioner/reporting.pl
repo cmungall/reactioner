@@ -10,6 +10,7 @@
 :- use_module(library(sparqlprog/owl_util)).
 
 :- use_module(library(reactioner)).
+:- use_module(library(reactioner/rhea_wrapper)).
 :- use_module(library(sparqlprog/dataframe)).
 :- use_module(library(sparqlprog/obo_util)).
 
@@ -31,12 +32,65 @@ dataframe:dataframe(non_catalytic_activity_with_rhea_xref,
 dataframe:dataframe(xref_summary,
                     [[class=C]-catalytic_activity(C),
                      [rhea=X]-entity_xref_prefix(C,X,"RHEA"),
-                     [ec=X]-entity_xref_prefix(C,X,"EC"),
                      [metacyc=X]-entity_xref_prefix(C,X,"MetaCyc"),
+                     [ec=X]-entity_xref_prefix(C,X,"EC"),
+                     [umbbd_enzyme=X]-entity_xref_prefix(C,X,"UM-BBD_enzymeID"),
+                     [umbbd_reaction=X]-entity_xref_prefix(C,X,"UM-BBD_reactionID"),
+                     [kegg=X]-entity_xref_prefix(C,X,"KEGG"),
+                     [img=X]-entity_xref_prefix(C,X,"IMG"),
                      [is_leaf=IsLeaf]-(owl:subClassOf(_,C) -> IsLeaf=false ; IsLeaf=true)
                     ],
                     [entity(class),
                      description('Summary of xrefs of all CAs')]).
+
+dataframe:dataframe(rhea_xref_summary,
+                    [[rhea=R,
+                      direction=D]-(rhea:reaction_dir(R,D)),
+                     [go=X]-(cls_rhea_xref_uri(X,R),owl:class(X)),
+                     [metacyc=X]-rhea2xref(R,X,'http://identifiers.org/biocyc/META'),
+                     [ecocyc=X]-rhea2xref(R,X,'http://identifiers.org/biocyc/ECO'),
+                     [kegg=X]-rhea2xref(R,X,'http://identifiers.org/kegg.reaction/'),
+                     [ec=X]-rhea2xref(R,X,'http://purl.uniprot.org/enzyme/'),
+                     [uniprot=X]-rhea2xref(R,X,'http://purl.uniprot.org/uniprot/')
+                    ],
+                    [entity(rhea),
+                     entity(go),
+                     entity(metacyc),
+                     entity(kegg),
+                     entity(ec),
+                     entity(reactome),
+                     description('Summary of xrefs of all RHEA reactions')]).
+
+dataframe:dataframe(rhea_xref_all,
+                    [[rhea=R,
+                      direction=D,
+                      xref=X,
+                      db=DB]-(rhea:reaction_dir(R,D),
+                              rhea2xref_db(R,X,DB))
+                    ],
+                    [entity(rhea),
+                     entity(xref),
+                     description('All xrefs of all RHEA reactions')]).
+
+dataframe:dataframe(rhea_summary,
+                    [[rhea=R]-(rhea:reaction(R))
+                    ],
+                    [entity(rhea),
+                     description('Summary of RHEA')]).
+
+
+dataframe:dataframe(old_rhea2go,
+                    [[rhea_id=RheaId,
+                      id=C,
+                      db=DB]-(
+                              (   entity_xref_prefix(C,X,"RHEA"),
+                                  catalytic_activity(C),
+                                  str_after(X,":",RheaId),
+                                  DB='GO')
+                             ;
+                              rhea_xref_db(RheaId,C,DB))
+                    ],
+                    [description('Mimics rhea2xrefs.tsv')]).
 
 dataframe:dataframe(no_parse,
                     [[class=C,
@@ -82,6 +136,20 @@ dataframe:dataframe(new_rhea_match,
                      entity(rhea),
                      entity(info),
                      description('Find new rhea xrefs')]).
+
+dataframe:dataframe(compare_rhea_chebi_names,
+                    [
+                     [rhea_participant=RN,
+                      pred=Pred,
+                      xrefs=Xs,
+                      chebi=Chebi,
+                      ambigs=Ambigs]-compare_rhea_chebi_names(RN,Pred,Xs,Chebi,Ambigs)
+                    ],
+                    [sort(rhea_participant),
+                     entity(chebi),
+                     entity(ambigs),
+                     description('')]).
+
 
 dataframe:dataframe(rhea_derived_synonyms_minimal,
                     [

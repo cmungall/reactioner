@@ -4,6 +4,7 @@
            is_approved/1,
            is_transport/1,
            reaction/1,
+           reaction_dir/2,
            rhea_xref/2,
 
            reaction_side/2,
@@ -31,9 +32,18 @@ is_approved(A) :- rhea_status(A,rh:'Approved').
 is_transport(R) :- rdf(R,rh:isTransport,"true"^^xsd:boolean).
 
 :- rdf_meta reaction(r).
-reaction(R) :- rdf(R,rdfs:subClassOf,rh:'Reaction').
+generic_reaction(R) :- rdf(R,rdfs:subClassOf,rh:'Reaction').
 directional_reaction(R) :- rdf(R,rdfs:subClassOf,rh:'DirectionalReaction').
 bidirectional_reaction(R) :- rdf(R,rdfs:subClassOf,rh:'BidirectionalReaction').
+
+reaction(R) :- generic_reaction(R).
+reaction(R) :- directional_reaction(R).
+reaction(R) :- bidirectional_reaction(R).
+
+reaction_dir(R,g) :- generic_reaction(R).
+reaction_dir(R,di) :- directional_reaction(R).
+reaction_dir(R,bi) :- bidirectional_reaction(R).
+
 
 directional_form(R,DR) :- rdf(R,rh:directionalReaction,DR).
 bidirectional_form(R,DR) :- rdf(R,rh:bidirectionalReaction,DR).

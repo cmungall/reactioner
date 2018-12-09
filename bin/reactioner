@@ -209,14 +209,6 @@ run(gensyns, _, Opts) :-
 run(report, [Name|_], _Opts) :-
         dataframe_to_csv(Name,[]).
 
-fix_chebi_syn(C,N2) :-
-        (   rdf(C,oio:hasExactSynonym,N)
-        ;   rdf(C,oio:hasRelatedSynonym,N)),
-        ensure_atom(N,A),
-        atom_concat('a ',N2,A),
-        \+ ((rdf(C,_,Z),
-             ensure_atom(Z,N2))).
-
 
 run(fix_chebi, _, Opts) :-
         option(output(Out),Opts,'tmp/chebi_extra_syns.rdf'),
@@ -225,6 +217,13 @@ run(fix_chebi, _, Opts) :-
                rdf_assert(C,oio:hasExactSynonym,N^^xsd:string,G)),
         rdf_save(Out,[graph(G)]).
 
+fix_chebi_syn(C,N2) :-
+        (   rdf(C,oio:hasExactSynonym,N)
+        ;   rdf(C,oio:hasRelatedSynonym,N)),
+        ensure_atom(N,A),
+        atom_concat('a ',N2,A),
+        \+ ((rdf(C,_,Z),
+             ensure_atom(Z,N2))).
 
 
 

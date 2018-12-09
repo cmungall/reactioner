@@ -28,9 +28,12 @@
            reaction_signature/2,
            identical_signature/2,
            identical_signature/4,
+           rhea2xref/3,
+           rhea2xref_db/3,
            cls_rhea_xref_uri/2,
            new_rhea_match/5,
            check_rhea/5,
+           compare_rhea_chebi_names/5,
            rhea_derived_synonym/4,
            rhea_derived_synonym/5,
            defn_reaction/4,
@@ -359,6 +362,35 @@ side_participants(Side,Ps) :-
 % matching rhea
 % ----------------------------------------
 
+rhea2xref(R,X,Base) :-
+        rdf(R,rdfs:seeAlso,U),
+        atom_concat(Base,X,U).
+rhea2xref(R,X,Base) :-
+        Base = 'http://purl.uniprot.org/enzyme/',
+        rdf(R,rh:ec,U),
+        atom_concat(Base,X,U).
+rhea2xref(R,X,Base) :-
+        Base = 'http://purl.uniprot.org/uniprot/',
+        rhea2uniprot(N,X),
+        atom_number(A,N),
+        rdf_global_id(rh:A,R).
+rhea2xref(R,X,Base) :-
+        Base = 'http://purl.obolibrary.org/obo/GO_',
+        cls_rhea_xref_uri(X,R),
+        owl:class(X).
+
+rhea2xref_db(R,X,DB) :-
+        rhea2xref(R,X,Base),
+        base_prefix(Base,DB).
+base_prefix('http://identifiers.org/biocyc/META',metacyc).
+base_prefix('http://identifiers.org/biocyc/ECO',ecocyc).
+base_prefix('http://identifiers.org/kegg.reaction/',kegg).
+base_prefix('http://identifiers.org/enzyme/',ec).
+base_prefix('http://purl.uniprot.org/uniprot/',uniprot).
+base_prefix('http://purl.obolibrary.org/obo/GO_',go).
+
+
+
 %! new_rhea_match(?Activity, ?ReactionExpr, ?Xref, ?Score, ?M) is nondet
 new_rhea_match(A,Re,X,S,M) :-
         catalytic_activity(A),
@@ -469,17 +501,43 @@ setif(_,F,_,F).
 rhea_derived_synonym(Cls,N,Info,Score) :-
         rhea_derived_synonym(_R,Cls,N,Info,Score).
 rhea_derived_synonym(R,Cls,N,Info,Score) :-
-        rhea:reaction_participant(R,P),
-        rdf(P,rh:compound,C),
-        rdf(C,rh:chebi,Cls),
-        rdf(C,rh:name,NLit),
-        ensure_atom(NLit,N1),
-        atom_concat('a ',N,N1),
+        rhea_label_chebi(R,N,Cls),
         \+ basic_annot(Cls,_,N,_),
         setif((basic_annot(XCls,_,N,_)),
               Info,ambiguous(XCls),newsyn),
         setif(best_chemterm_lexmatch_id(N,_,[Cls],Score),
               Score,Score,0).
+
+rhea_label_chebi(R,N,Cls) :-
+        rhea:reaction_participant(R,P),
+        rdf(P,rh:compound,C),
+        rdf(C,rh:chebi,Cls),
+        rdf(C,rh:name,NLit),
+        ensure_atom(NLit,N1),
+        (   atom_concat('a ',N,N1)
+        ->  true
+        ;   N=N1).
+
+
+compare_rhea_chebi_names(RN,Pred,Xs,Cls,Ambigs) :-
+        rhea_label_chebi(_,RN,Cls),
+        compare_label(Cls,RN,Pred,Xs),
+        (   Pred=label
+        ->  Ambigs=[]
+        ;   solutions(P2+C2,(basic_annot(C2,P2,RN,_),C2\=Cls),Ambigs)).
+
+
+% reification on subject and target
+so_reif_xref(S,T,X) :-
+        rdf(Ax,owl:annotatedSource,S),
+        rdf(Ax,owl:annotatedTarget,T),
+        rdf(Ax,oio:hasDbXref,X).
+compare_label(Cls,N,Pred,Xs) :-
+        basic_annot(Cls,Pred,N,_),
+        !,
+        atom_string(N,S),
+        solutions(X,so_reif_xref(Cls,S,X),Xs).
+compare_label(_,_,nomatch,[]).
 
 
 

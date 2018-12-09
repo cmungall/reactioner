@@ -1,5 +1,4 @@
 class	class label	textdef	rhea	ec	metacyc	is_leaf
-ca:	catalytic activity	Catalysis of a biochemical reaction at physiological temperatures. In biologically catalyzed reactions, the reactants are known as substrates, and the catalysts are naturally occurring macromolecular substances known as enzymes. Enzymes possess specific binding sites for substrates, and are usually composed wholly or largely of protein, but RNA that has catalytic activity (ribozyme) is often also regarded as enzymatic.				false
 GO:0004133	glycogen debranching enzyme activity	Catalysis of the cleavage of branch points in branched glycogen polymers.				false
 GO:0009975	cyclase activity	Catalysis of a ring closure reaction.				false
 GO:0016491	oxidoreductase activity	Catalysis of an oxidation-reduction (redox) reaction, a reversible chemical reaction in which the oxidation state of an atom or atoms within a molecule is altered. One substrate acts as a hydrogen or electron donor and becomes oxidized, while the other acts as hydrogen or electron acceptor and becomes reduced.		EC:1		false

@@ -36,6 +36,17 @@ tsv: data/rhea-tsv.tar.gz
 data/rhea_xrefs.pro: tsv/rhea2xrefs.tsv
 	grep -v UNIPROT $< | ./util/xreftsv2pro.pl > $@
 
+tsv/rhea2uniprot_n.tsv: tsv/rhea2uniprot.tsv
+	grep -v ^RHEA $< | awk '{print $$0,"\tUNIPROT"}' > $@
+tsv/rhea2xrefs_plus_uniprot.tsv: tsv/rhea2xrefs.tsv tsv/rhea2uniprot_n.tsv
+	cat $^ > $@
+
+data/rhea2uniprot.pro: tsv/rhea2uniprot.tsv
+	cut -f1,4 $< | grep -v ^RHEA_ID | tbl2p -p rhea2uniprot > $@
+
+data/rhea_xref_db.pro: tsv/rhea2xrefs_plus_uniprot.tsv
+	grep -v ^RHEA $< | cut -f1,4,5 | tbl2p -p rhea_xref_db > $@
+
 # generate new CHEBI synonyms based on how RHEA maps its labels to CHEBI IDs
 data/gensyns.rdf:
 	./bin/reactioner -i data/rhea.rdf.gz -i data/chebi.owl.gz -i data/go-ca.ttl.gz -o $@ gensyns
@@ -51,22 +62,31 @@ data/fix_chebi_syn.rdf:
 REPORTS = go-activities xref-summary go-no-parse go-rhea-check go-rhea-newsyns chebi-no-match.tsv
 all_reports: $(patsubst %,reports/%.tsv,$(REPORTS))
 
-reports/go-activities.tsv:
+reports/go-activities.tsv: trigger
 	./bin/reactioner -i data/chebi.owl.gz -i data/go-ca.ttl.gz report catalytic_activity > $@.tmp && mv $@.tmp $@
-reports/xref-summary.tsv:
+reports/xref-summary.tsv: trigger
 	./bin/reactioner -i data/chebi.owl.gz -i data/go-ca.ttl.gz report xref_summary > $@.tmp && mv $@.tmp $@
-reports/go-no-parse.tsv:
+reports/go-no-parse.tsv: trigger
 	./bin/reactioner -i data/chebi.owl.gz -i data/go-ca.ttl.gz report no_parse > $@.tmp && mv $@.tmp $@
-reports/go-rhea-check.tsv:
+reports/go-rhea-check.tsv: trigger
 	./bin/reactioner -l -v -T -i data/rhea.rdf.gz -i data/chebi.owl.gz -i data/go-ca.ttl.gz report check_rhea_xref > $@.tmp && mv $@.tmp $@
-reports/go-rhea-newsyns.tsv:
-	./bin/reactioner -l -v -T -i data/rhea.rdf.gz -i data/chebi.owl.gz report  rhea_derived_synonyms > $@.tmp && mv $@.tmp $@
-reports/chebi-no-match.tsv:
-	./bin/reactioner -l -v -T -i data/rhea.rdf.gz -i data/go-ca.ttl.gz -i data/chebi.owl.gz report  chebi_no_match > $@.tmp && mv $@.tmp $@
-reports/new_rhea_match.tsv:
+reports/go-rhea-newsyns.tsv: trigger
+	./bin/reactioner -l -v -T -i data/fix_chebi_syn.rdf -i data/rhea.rdf.gz -i data/chebi.owl.gz report  rhea_derived_synonyms > $@.tmp && mv $@.tmp $@
+reports/compare_rhea_chebi_names.tsv: trigger
+	./bin/reactioner -l -v -T -i data/fix_chebi_syn.rdf -i data/rhea.rdf.gz -i data/chebi.owl.gz report  compare_rhea_chebi_names > $@.tmp && mv $@.tmp $@
+reports/chebi-no-match.tsv: trigger
+	./bin/reactioner -l -v -T -i data/fix_chebi_syn.rdf -i data/rhea.rdf.gz -i data/go-ca.ttl.gz -i data/chebi.owl.gz report  chebi_no_match > $@.tmp && mv $@.tmp $@
+reports/new_rhea_match.tsv: trigger
 	./bin/reactioner -l -v -T -i data/gensyns.rdf -i data/rhea.rdf.gz -i data/go-ca.ttl.gz -i data/chebi.owl.gz report  new_rhea_match > $@.tmp && mv $@.tmp $@
-reports/non_catalytic_activity_with_rhea_xref.tsv:
+reports/non_catalytic_activity_with_rhea_xref.tsv: trigger
 	./bin/reactioner -l -v -T -i data/go-ca.ttl.gz report non_catalytic_activity_with_rhea_xref > $@.tmp && mv $@.tmp $@
+reports/rhea_xref_summary.tsv: trigger
+	./bin/reactioner -l -v -T -i data/go-ca.ttl.gz  -i data/rhea.rdf.gz  -c data/rhea2uniprot.pro -g "materialize_index(rhea2xref(+,+,+)),materialize_index(cls_rhea_xref_uri(+,+))" report rhea_xref_summary > $@.tmp && mv $@.tmp $@
+reports/rhea_xref_all.tsv: trigger
+	./bin/reactioner -l -v -T -i data/go-ca.ttl.gz  -i data/rhea.rdf.gz  -c data/rhea2uniprot.pro -g "materialize_index(rhea2xref(+,+,+)),materialize_index(cls_rhea_xref_uri(+,+))" report rhea_xref_all > $@.tmp && mv $@.tmp $@
+
+trigger:
+	touch $@
 
 # --------------------
 # Docker

@@ -53,6 +53,10 @@ Sample:
 
  * [go-rhea-newsyns.tsv](go-rhea-newsyns.tsv)
 
+DEPRECATED! This report produced false positives due to https://github.com/ebi-chebi/ChEBI/issues/3544
+
+We now include the "a foo" synonyms as "foo"
+
 Sample:
 
 |class|class label|rhea_name|info|score|ambiguous_with|ambiguous_with label
@@ -70,6 +74,8 @@ Sample:
 ## Align xreffed RHEA reaction to parsed GO def
 
  * [go-rhea-check.tsv](go-rhea-check.tsv)
+
+
 
 Sample:
 
