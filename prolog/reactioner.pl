@@ -442,7 +442,7 @@ rhea_match(C,Re,X,S,M,Type) :-
         candidate_mf_reaction(C,_,Re,S1,_),
         align_reaction(Re,X,M,Type),
         (   Type=matched
-        ->  S is S1 + 10
+        ->  S is S1 + 1000
         ;   S=S1).
 
 %! align_reaction(+ReactionExpr, ?Xref, ?Match, ?Type) is nondet
@@ -525,9 +525,9 @@ compare_rhea_chebi_names(RN,Pred,Xs,Cls,Ambigs,AmbigsRelations) :-
         (   Pred=label
         ->  Ambigs=[]
         ;   solutions(P2+C2,(basic_annot(C2,P2,RN,_),C2\=Cls),Ambigs)),
-        findall(R,((member(_+AmbigC,Ambigs),
-                    relationship_to(AmbigC,Cls,R))),
-                AmbigsRelations).
+        solutions(R,((member(_+AmbigC,Ambigs),
+                      relationship_to(AmbigC,Cls,R))),
+                  AmbigsRelations).
 
 relationship_to(A,A,identical_to) :- !.
 relationship_to(A,B,direct_subClassOf) :-
