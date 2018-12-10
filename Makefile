@@ -69,13 +69,13 @@ reports/xref-summary.tsv: trigger
 reports/go-no-parse.tsv: trigger
 	./bin/reactioner -i data/chebi.owl.gz -i data/go-ca.ttl.gz report no_parse > $@.tmp && mv $@.tmp $@
 reports/go-rhea-check.tsv: trigger
-	./bin/reactioner -l -v -T -i data/rhea.rdf.gz -i data/chebi.owl.gz -i data/go-ca.ttl.gz report check_rhea_xref > $@.tmp && mv $@.tmp $@
+	./bin/reactioner -l -v -T -i data/fix_chebi_syn.rdf -i data/chebi.owl.gz -i data/rhea.rdf.gz -i data/go-ca.ttl.gz report check_rhea_xref > $@.tmp && mv $@.tmp $@
 reports/go-rhea-newsyns.tsv: trigger
-	./bin/reactioner -l -v -T -i data/fix_chebi_syn.rdf -i data/rhea.rdf.gz -i data/chebi.owl.gz report  rhea_derived_synonyms > $@.tmp && mv $@.tmp $@
+	./bin/reactioner -l -v -T -i data/fix_chebi_syn.rdf -i data/chebi.owl.gz -i data/rhea.rdf.gz report  rhea_derived_synonyms > $@.tmp && mv $@.tmp $@
 reports/compare_rhea_chebi_names.tsv: trigger
-	./bin/reactioner -l -v -T -i data/fix_chebi_syn.rdf -i data/rhea.rdf.gz -i data/chebi.owl.gz report  compare_rhea_chebi_names > $@.tmp && mv $@.tmp $@
+	./bin/reactioner -l -v -T -i data/fix_chebi_syn.rdf -i data/chebi.owl.gz -i data/rhea.rdf.gz report  compare_rhea_chebi_names > $@.tmp && mv $@.tmp $@
 reports/chebi-no-match.tsv: trigger
-	./bin/reactioner -l -v -T -i data/fix_chebi_syn.rdf -i data/rhea.rdf.gz -i data/go-ca.ttl.gz -i data/chebi.owl.gz report  chebi_no_match > $@.tmp && mv $@.tmp $@
+	./bin/reactioner -l -v -T -i data/fix_chebi_syn.rdf -i data/chebi.owl.gz -i data/rhea.rdf.gz -i data/go-ca.ttl.gz report  chebi_no_match > $@.tmp && mv $@.tmp $@
 reports/new_rhea_match.tsv: trigger
 	./bin/reactioner -l -v -T -i data/gensyns.rdf -i data/rhea.rdf.gz -i data/go-ca.ttl.gz -i data/chebi.owl.gz report  new_rhea_match > $@.tmp && mv $@.tmp $@
 reports/non_catalytic_activity_with_rhea_xref.tsv: trigger

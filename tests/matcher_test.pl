@@ -42,6 +42,19 @@ test(x3) :-
         defn_reaction(Def,R,_,_),
         format('~q~n',[R]).
 
+%:- debug(scores).
+
+test(rhea) :-
+        Def = 'Catalysis of the reaction: a 1,2-diacyl-sn-glycerol + a glycerophospholipid = a monoacylglycerophospholipid + a triacyl-sn-glycerol.',
+        defn_reaction(Def,R,_,_),
+        format('~q~n',[R]).
+
+test(alternates) :-
+        Def = 'Catalysis of the reaction: GTP = 3\',5\'-cyclic GMP + diphosphate.',
+        writeln(alts),
+        showall(defn_reaction(Def,_,_,_)),
+        nl.
+
 test(ms1) :-
         reactioner:match_chemicals([`ATP`-1],M,S),
         format('~q ~q~n',[M,S]).

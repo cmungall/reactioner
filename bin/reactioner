@@ -206,6 +206,21 @@ run(gensyns, _, Opts) :-
                rdf_assert(Cls,oio:hasExactSynonym,N^^xsd:string,G)),
         rdf_save(Out,[graph(G)]).
 
+run(parse, [Def|_], _Opts) :-
+        G = defn_reaction(Def,_,_,_),
+        forall(G,
+               format('~q.~n',[G])).
+
+% remember to use URI
+run(check_go_rhea, [C|_], _Opts) :-
+        rdf_global_id(C,CX),
+        writeln(looking_up_xref(CX)),
+        cls_rhea_xref_uri(CX,X),
+        G = rhea_match(CX,_Re,X,_S,_M,_Info),
+        forall(G,
+               format('~q.~n',[G])).
+
+
 run(report, [Name|_], _Opts) :-
         dataframe_to_csv(Name,[]).
 

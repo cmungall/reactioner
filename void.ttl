@@ -23,4 +23,8 @@
     a lib:Ontology ;
     a lib:Virtual ;
     owl:imports <chebi>, <go-ca>, <rhea> .
+<chebi_fixed>
+    a lib:Ontology ;
+    a lib:Virtual ;
+    owl:imports <chebi>, <chebi_fixed_syns> .
 

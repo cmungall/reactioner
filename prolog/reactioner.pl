@@ -31,8 +31,9 @@
            rhea2xref/3,
            rhea2xref_db/3,
            cls_rhea_xref_uri/2,
+           rhea_match/6,
            new_rhea_match/5,
-           check_rhea/5,
+           check_rhea/6,
            compare_rhea_chebi_names/6,
            rhea_derived_synonym/4,
            rhea_derived_synonym/5,
@@ -235,8 +236,10 @@ match_chemical_expr(Tok, Cls/Label, Score) :-
 % basic match
 match_chemical(Tok, Cls/Label, Score) :-
         atom_codes(Term,Tok),
-        basic_annot(Cls,P,Term,_),
-        pred_score(P,Score),
+        basic_annot(Cls,P,Term,rdf(Subj,_,Obj)),
+        solutions(X,so_reif_xref(Subj,Obj,X),Xs),
+        pred_score(P,Xs,Score),
+        debug(scores,'~w => ~w P:~w Score=~w',[Term,Cls,P,Score]),
         get_label(Cls, Label).
 
 % no parse
@@ -285,10 +288,11 @@ get_label(Cls,Label) :-
 get_label(Cls,Cls).
 
 % chebi syns are undistinguished
-pred_score(label,10) :- !.
-pred_score(exact,8) :- !.
-pred_score(related,8) :- !.
-pred_score(_,-1) :- !.
+pred_score(_,Xs,15) :- member('UniProt', Xs),!.
+pred_score(label,_,10) :- !.
+pred_score(exact,_,8) :- !.
+pred_score(related,_,8) :- !.
+pred_score(_,_,-1) :- !.
 
 
 
@@ -411,8 +415,8 @@ cls_rhea_xref_uri(C,X) :-
         rdf(C,oio:hasDbXref,XS^^_),
         expand_xref(XS,X).
 
-%! check_rhea(?GoCls, ?ReactionExpr, ?RheaXref, ?Match, ?Info) is nondet
-%! check_rhea(+GoCls, ?ReactionExpr, +RheaXref, ?Match, ?Info) is det
+%! check_rhea(?GoCls, ?ReactionExpr, ?RheaXref, ?Match, ?Info, ?Score) is nondet
+%! check_rhea(+GoCls, ?ReactionExpr, +RheaXref, ?Match, ?Info, ?Score) is det
 %
 %  for any GoClas-RheaXref pair (where the xref must be assigned in the ontology),
 %  validate the xref. First parse the definition for the GO Class, then try and
@@ -422,20 +426,19 @@ cls_rhea_xref_uri(C,X) :-
 %
 %  if nomatch, then Info = list of all rhea participants
 %  if match, then Info = list of any assumed CHEBI synonyms (for unparsed elements)
-check_rhea(C,Re,X,M,Info) :-
+check_rhea(C,Re,X,M,Info,S) :-
         cls_rhea_xref_uri(C,X),
-        best_rhea_match(C,Re,X,_S,M,Info).
+        best_rhea_match_for_xref(C,Re,X,S,M,Info).
 
-best_rhea_match(C,Re,X,S,M,Info) :-
+best_rhea_match_for_xref(C,Re,X,S,M,Info) :-
         rhea_match(C,Re,X,S,M,Info),
-        \+ ((rhea_match(C,_,X2,S2,_,_),
-             X2\=X,
+        \+ ((rhea_match(C,_,X,S2,_,_),
              S2 > S)),
         !.
-best_rhea_match(C,Re,_,0,[],nomatch) :-
-        mf_reaction(C,Re),
+best_rhea_match_for_xref(C,Re,_,S,[],nomatch) :-
+        mf_reaction(C,Re,_,S,_),
         !.
-best_rhea_match(_,no_reaction,_,0,[],no_reaction_parse) :-
+best_rhea_match_for_xref(_,no_reaction,_,0,[],no_reaction_parse) :-
         !.
 
 
@@ -446,8 +449,8 @@ rhea_match(C,Re,X,S,M,Type) :-
         candidate_mf_reaction(C,_,Re,S1,_),
         align_reaction(Re,X,M,Type),
         (   Type=matched
-        ->  S is S1 + 1000
-        ;   S=S1).
+        ->  S is S1
+        ;   S is S1 - 1000).
 
 %! align_reaction(+ReactionExpr, ?Xref, ?Match, ?Type) is nondet
 %
@@ -458,7 +461,12 @@ align_reaction(Re,X,M,Type) :-
         rhea:reaction(X),
         setof(XP,rhea:reaction_chebi_participant(X,XP),XPs),
         %debug(rhea,'Attempting to match ~w == ~w',[Ps,XPs]),
-        strict_match_participants_det(Ps,XPs,M,Type),
+        strict_match_participants_det(Ps,XPs,M,Type).
+
+strict_match_participants_det(Ps,XPs,[],participant_count_mismatch) :-
+        length(Ps,NumPs),
+        length(XPs,NumXPs),
+        NumPs\=NumXPs,
         !.
 
 strict_match_participants_det(Ps,XPs,M,Type) :-
@@ -484,8 +492,8 @@ match_participant(P,L,L2,[]) :-
 match_participant(P,L,L2,[Term=P2]) :-
         rdf_global_id(noparse:Term,P),
         % for a non-parsed term, find the best match
-        setof(S-Px,chemterm_lexmatch_id(Term,Px,L,S),Pairs),
-        reverse(Pairs,[_-P2|_]),
+        %setof(S-Px,chemterm_lexmatch_id(Term,Px,L,S),Pairs),
+        %reverse(Pairs,[_-P2|_]),
         select(P2,L,L2).
 
 best_chemterm_lexmatch_id(Term,X,L,S) :-
