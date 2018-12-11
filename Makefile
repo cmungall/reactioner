@@ -30,6 +30,13 @@ t-%:
 data/rhea-tsv.tar.gz:
 	wget ftp://ftp.ebi.ac.uk/pub/databases/rhea/tsv/rhea-tsv.tar.gz -O $@
 
+data/chebi_pH7_3_mapping.tsv:
+	wget ftp://ftp.expasy.org/databases/rhea/tsv/chebi_pH7_3_mapping.tsv -O $@
+
+# official ECs
+data/rhea-ec-iubmb.tsv:
+	wget ftp://ftp.expasy.org/databases/rhea/tsv/rhea-ec-iubmb.tsv -O $@
+
 tsv: data/rhea-tsv.tar.gz
 	tar -zxvf $<
 
@@ -84,6 +91,9 @@ reports/rhea_xref_summary.tsv: trigger
 	./bin/reactioner -l -v -T -i data/go-ca.ttl.gz  -i data/rhea.rdf.gz  -c data/rhea2uniprot.pro -g "materialize_index(rhea2xref(+,+,+)),materialize_index(cls_rhea_xref_uri(+,+))" report rhea_xref_summary > $@.tmp && mv $@.tmp $@
 reports/rhea_xref_all.tsv: trigger
 	./bin/reactioner -l -v -T -i data/go-ca.ttl.gz  -i data/rhea.rdf.gz  -c data/rhea2uniprot.pro -g "materialize_index(rhea2xref(+,+,+)),materialize_index(cls_rhea_xref_uri(+,+))" report rhea_xref_all > $@.tmp && mv $@.tmp $@
+
+reports/inchikey.tsv: trigger
+	./bin/reactioner -l -v -T  -i data/chebi.owl.gz  report inchikey > $@.tmp && mv $@.tmp $@
 
 trigger:
 	touch $@
