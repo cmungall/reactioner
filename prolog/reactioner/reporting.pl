@@ -46,6 +46,8 @@ dataframe:dataframe(xref_summary,
 dataframe:dataframe(rhea_xref_summary,
                     [[rhea=R,
                       direction=D]-(rhea:reaction_dir(R,D)),
+                     [parent=X]-(rhea:reaction_isa(R,X)),
+                     [child=X]-(rhea:reaction_isa(X,R)),
                      [go=X]-(cls_rhea_xref_uri(X,R),owl:class(X)),
                      [metacyc=X]-rhea2xref(R,X,'http://identifiers.org/biocyc/META'),
                      [ecocyc=X]-rhea2xref(R,X,'http://identifiers.org/biocyc/ECO'),
@@ -54,6 +56,8 @@ dataframe:dataframe(rhea_xref_summary,
                      [uniprot=X]-rhea2xref(R,X,'http://purl.uniprot.org/uniprot/')
                     ],
                     [entity(rhea),
+                     entity(parent),
+                     entity(child),
                      entity(go),
                      entity(metacyc),
                      entity(kegg),
@@ -147,7 +151,8 @@ dataframe:dataframe(compare_rhea_chebi_names,
                       xrefs=Xs,
                       chebi=Chebi,
                       ambigs=Ambigs,
-                      ambig_relations=AmbigRelations]-compare_rhea_chebi_names(RN,Pred,Xs,Chebi,Ambigs,AmbigRelations)
+                      ambig_relations=AmbigRelations,
+                      inchitest=InchiTest]-compare_rhea_chebi_names(RN,Pred,Xs,Chebi,Ambigs,AmbigRelations,InchiTest)
                     ],
                     [sort(rhea_participant),
                      entity(chebi),
@@ -202,5 +207,23 @@ dataframe:dataframe(chebi_no_match,
                      entity(rhea_chebi_id),
                      description('Participant strings in a GO reaction def that can not be recognized directly in CHEBI.
                                 If a RHEA match is available we show this')]).
+
+dataframe:dataframe(inchikey,
+                    [
+                     [inchikey=K,
+                      chebi=Chebis,
+                      relations=Rs]-(setof(C,inchikey(C,K),Chebis),
+                                     Chebis=[_,_|_],
+                                     findall(R,
+                                             (   member(X,Chebis),
+                                                 member(Y,Chebis),
+                                                 X@<Y,
+                                                 reactioner:relationship_to(X,Y,R)),
+                                             Rs))
+                    ],
+                    [entity(chebi),
+                     description('Group chemicals by inchikey')]).
+
+
 
 

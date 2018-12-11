@@ -5,6 +5,8 @@
            is_transport/1,
            reaction/1,
            reaction_dir/2,
+           reaction_isa/2,
+           reaction_isa/4,
            rhea_xref/2,
 
            reaction_side/2,
@@ -43,6 +45,9 @@ reaction(R) :- bidirectional_reaction(R).
 reaction_dir(R,g) :- generic_reaction(R).
 reaction_dir(R,di) :- directional_reaction(R).
 reaction_dir(R,bi) :- bidirectional_reaction(R).
+
+reaction_isa(R,S) :- reaction_isa(R,S,_,_).
+reaction_isa(R,S,DR,DS) :- rdf(R,rdfs:subClassOf,S),reaction_dir(R,DR),reaction_dir(S,DS).
 
 
 directional_form(R,DR) :- rdf(R,rh:directionalReaction,DR).

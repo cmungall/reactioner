@@ -24,6 +24,7 @@
            sum_all_elqs/2,
            diff_all_elqs/2,
            no_parse/2,
+           inchikey/2,
            chebi_no_parse/2,
            reaction_signature/2,
            identical_signature/2,
@@ -34,7 +35,7 @@
            rhea_match/6,
            new_rhea_match/5,
            check_rhea/6,
-           compare_rhea_chebi_names/6,
+           compare_rhea_chebi_names/7,
            rhea_derived_synonym/4,
            rhea_derived_synonym/5,
            defn_reaction/4,
@@ -531,7 +532,7 @@ rhea_label_chebi(R,N,Cls) :-
         ;   N=N1).
 
 
-compare_rhea_chebi_names(RN,Pred,Xs,Cls,Ambigs,AmbigsRelations) :-
+compare_rhea_chebi_names(RN,Pred,Xs,Cls,Ambigs,AmbigsRelations,SameInchi) :-
         rhea_label_chebi(_,RN,Cls),
         compare_label(Cls,RN,Pred,Xs),
         (   Pred=label
@@ -539,7 +540,13 @@ compare_rhea_chebi_names(RN,Pred,Xs,Cls,Ambigs,AmbigsRelations) :-
         ;   solutions(P2+C2,(basic_annot(C2,P2,RN,_),C2\=Cls),Ambigs)),
         solutions(R,((member(_+AmbigC,Ambigs),
                       relationship_to(AmbigC,Cls,R))),
-                  AmbigsRelations).
+                  AmbigsRelations),
+        (   Ambigs=[_+A1|_],
+            inchikey(A1,IK),
+            forall(member(_+A2,Ambigs),inchikey(A2,IK))
+        ->  SameInchi=same_inchikey
+        ;   SameInchi=different_inchikeys).
+
 
 relationship_to(A,A,identical_to) :- !.
 relationship_to(A,B,direct_subClassOf) :-
