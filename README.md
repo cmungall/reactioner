@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/13996/cmungall/reactioner.svg)](https://zenodo.org/badge/latestdoi/13996/cmungall/reactioner)
+
 # reactioner (ALPHA RELEASE)
 
 Parses textual descriptions of reactions into pathways and OWL expressions
